@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Active Residents - Support Center</title>
+    <meta content="Get help with the Active Residents app. Find FAQs, guides, and contact support." name="description"/>
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Active Residents support, help center, FAQ, customer support, app help"/>
+    <meta name="author" content="Active Residents Ltd"/>
+    <link rel="canonical" href="https://www.activeresidents.co.uk/support.html"/>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Active Residents - Support Center"/>
+    <meta property="og:description" content="Get help with the Active Residents app. Find FAQs, guides, and contact support."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.activeresidents.co.uk/support.html"/>
+    <meta property="og:image" content="https://www.activeresidents.co.uk/og-image.jpg"/>
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Active Residents - Support Center"/>
+    <meta name="twitter:description" content="Get help with the Active Residents app. Find FAQs, guides, and contact support."/>
+    <meta name="twitter:image" content="https://www.activeresidents.co.uk/og-image.jpg"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233B82F6' width='100' height='100' rx='20'/><text y='75' font-size='70' fill='white' font-family='Arial' x='50' text-anchor='middle'>AR</text></svg>"/>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              "primary-hover": "#2563EB",
+              "background-light": "#F0F7FF",
+              "background-dark": "#0F172A",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1E293B",
+              "text-main-light": "#1E293B",
+              "text-main-dark": "#F8FAFC",
+              "text-sub-light": "#64748B",
+              "text-sub-dark": "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Merriweather", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              'xl': '1.5rem',
+              '2xl': '2rem',
+              '3xl': '3rem',
+            },
+            boxShadow: {
+                'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                'glow': '0 0 20px rgba(59, 130, 246, 0.5)'
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #3B82F6, #8B5CF6);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+        .search-highlight {
+            background-color: yellow;
+            color: black;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-300 font-sans selection:bg-primary selection:text-white">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="glass-panel mx-4 mt-4 rounded-2xl px-6 py-4 shadow-soft max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <a class="flex items-center gap-2" href="index.html" aria-label="Active Residents Home">
+                    <div class="bg-primary text-white p-1.5 rounded-lg">
+                        <span class="material-symbols-outlined text-xl" aria-hidden="true">location_city</span>
+                    </div>
+                    <span class="font-display font-bold text-lg tracking-tight">Active<span class="text-primary">Residents</span></span>
+                </a>
+                <nav class="hidden md:flex gap-8 font-medium text-sm text-text-sub-light dark:text-text-sub-dark" aria-label="Main navigation">
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="index.html">Home</a>
+                    <a class="text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary rounded" href="support.html" aria-current="page">Support Center</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Community</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Blog</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined dark:hidden" aria-hidden="true">dark_mode</span>
+                        <span class="material-symbols-outlined hidden dark:block" aria-hidden="true">light_mode</span>
+                    </button>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 hidden sm:block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#">
+                        Download App
+                    </a>
+                    <button class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu md:hidden mt-4" id="mobile-menu" aria-label="Mobile navigation">
+                <div class="flex flex-col gap-4 pb-4">
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="index.html">Home</a>
+                    <a class="text-primary font-bold py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="support.html" aria-current="page">Support Center</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Community</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Blog</a>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 text-center sm:hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#">
+                        Download App
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200 dark:bg-blue-900/30 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-purple-200 dark:bg-purple-900/30 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                Support &amp; Help Center
+            </div>
+            <h1 class="font-display font-black text-4xl lg:text-5xl leading-tight text-main-light dark:text-main-dark mb-8 uppercase">
+                How can we help you <span class="text-gradient">today?</span>
+            </h1>
+            <div class="max-w-2xl mx-auto relative group">
+                <div class="absolute inset-0 bg-blue-500/20 rounded-2xl blur-xl group-hover:bg-blue-500/30 transition-all duration-300"></div>
+                <form class="relative bg-white dark:bg-surface-dark p-2 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-700 flex items-center" id="search-form" role="search">
+                    <label for="search-input" class="sr-only">Search for answers</label>
+                    <span class="material-symbols-outlined text-gray-400 pl-4 text-2xl" aria-hidden="true">search</span>
+                    <input class="w-full border-none focus:ring-0 bg-transparent text-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-400" placeholder="Search for answers (e.g., 'How to reset password', 'Report a pothole')" type="text" id="search-input" autocomplete="off"/>
+                    <button class="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-xl font-bold transition-colors hidden sm:block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                        Search
+                    </button>
+                </form>
+                <div id="search-results" class="absolute top-full mt-2 w-full bg-white dark:bg-surface-dark rounded-2xl shadow-xl border border-gray-100 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+            <p class="mt-6 text-text-sub-light dark:text-text-sub-dark text-sm">
+                Common searches: <a class="underline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" data-search="password">Password Reset</a>, <a class="underline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" data-search="track">Track Report</a>, <a class="underline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" data-search="notification">Notification Settings</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 pb-20 grid lg:grid-cols-12 gap-12">
+        <aside class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-32 space-y-8">
+                <div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary" aria-hidden="true">menu_book</span> Table of Contents
+                    </h3>
+                    <nav class="space-y-1 border-l-2 border-gray-100 dark:border-slate-800 pl-4" aria-label="Table of contents">
+                        <a class="block py-2 text-sm font-medium text-primary border-l-2 border-primary -ml-[18px] pl-4 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#quick-links">Quick Links</a>
+                        <a class="block py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#how-to-use">How to Use</a>
+                        <a class="block py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#faqs">FAQs</a>
+                        <a class="block py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#contact">Contact Support</a>
+                    </nav>
+                </div>
+                <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl border border-blue-100 dark:border-blue-800">
+                    <h4 class="font-bold text-blue-900 dark:text-blue-100 mb-2 text-sm">Need urgent help?</h4>
+                    <p class="text-xs text-blue-700 dark:text-blue-300 mb-4">Our support team is available Mon-Fri, 9am - 5pm.</p>
+                    <a class="text-xs font-bold text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#contact">Contact us →</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="lg:col-span-9 space-y-16" id="main-content">
+            <nav aria-label="Breadcrumb" class="flex text-sm text-gray-500 dark:text-gray-400">
+                <ol class="flex items-center space-x-2">
+                    <li><a class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary rounded" href="index.html">Home</a></li>
+                    <li><span class="mx-1">/</span></li>
+                    <li><span class="text-gray-900 dark:text-white font-medium" aria-current="page">Support Center</span></li>
+                </ol>
+            </nav>
+
+            <section class="scroll-mt-32" id="quick-links">
+                <h2 class="font-display font-bold text-2xl mb-6 dark:text-white flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">rocket_launch</span>
+                    Quick Links
+                </h2>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <a class="group bg-white dark:bg-surface-dark p-6 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all focus:outline-none focus:ring-2 focus:ring-primary" href="#">
+                        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined" aria-hidden="true">person_add</span>
+                        </div>
+                        <h3 class="font-bold text-lg dark:text-white mb-1 group-hover:text-primary transition-colors">Create Account</h3>
+                        <p class="text-sm text-gray-500">Register to start reporting.</p>
+                    </a>
+                    <a class="group bg-white dark:bg-surface-dark p-6 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all focus:outline-none focus:ring-2 focus:ring-primary" href="#">
+                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/40 rounded-xl flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined" aria-hidden="true">lock_reset</span>
+                        </div>
+                        <h3 class="font-bold text-lg dark:text-white mb-1 group-hover:text-purple-500 transition-colors">Reset Password</h3>
+                        <p class="text-sm text-gray-500">Recover your access.</p>
+                    </a>
+                    <a class="group bg-white dark:bg-surface-dark p-6 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all focus:outline-none focus:ring-2 focus:ring-primary" href="#">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center mb-4 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined" aria-hidden="true">history</span>
+                        </div>
+                        <h3 class="font-bold text-lg dark:text-white mb-1 group-hover:text-green-500 transition-colors">My Reports</h3>
+                        <p class="text-sm text-gray-500">Check status of reports.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="scroll-mt-32 searchable-content" id="how-to-use">
+                <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 border border-gray-100 dark:border-slate-700 shadow-soft">
+                    <h2 class="font-display font-bold text-2xl mb-8 dark:text-white flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary" aria-hidden="true">school</span>
+                        How to use Active Residents
+                    </h2>
+                    <div class="space-y-8 relative">
+                        <div class="absolute left-[27px] top-8 bottom-8 w-0.5 bg-gray-100 dark:bg-slate-700" aria-hidden="true"></div>
+                        <div class="flex gap-6 relative">
+                            <div class="flex-shrink-0 w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-full border-4 border-white dark:border-surface-dark flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">photo_camera</span>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-lg font-bold dark:text-white mb-2">1. Snap a Photo</h3>
+                                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                                    Open the app and tap the large camera button. Take a clear photo of the issue (e.g., pothole, graffiti). Ensure the surrounding area is visible for context.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 relative">
+                            <div class="flex-shrink-0 w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-full border-4 border-white dark:border-surface-dark flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">location_on</span>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-lg font-bold dark:text-white mb-2">2. Confirm Location</h3>
+                                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                                    The app automatically detects your location using GPS. Verify the pin on the map is correct. You can drag the pin to adjust if necessary.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 relative">
+                            <div class="flex-shrink-0 w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-full border-4 border-white dark:border-surface-dark flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">category</span>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-lg font-bold dark:text-white mb-2">3. Select Category</h3>
+                                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                                    Choose the most appropriate category from the list (e.g., Road Maintenance, Waste, Lighting). This ensures your report reaches the right council department instantly.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 relative">
+                            <div class="flex-shrink-0 w-14 h-14 bg-green-50 dark:bg-green-900/20 rounded-full border-4 border-white dark:border-surface-dark flex items-center justify-center z-10">
+                                <span class="material-symbols-outlined text-green-500" aria-hidden="true">check_circle</span>
+                            </div>
+                            <div class="pt-1">
+                                <h3 class="text-lg font-bold dark:text-white mb-2">4. Submit &amp; Track</h3>
+                                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                                    Hit submit! You'll receive a notification when the council views your report and another when the issue has been resolved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scroll-mt-32 searchable-content" id="faqs">
+                <h2 class="font-display font-bold text-2xl mb-6 dark:text-white flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary" aria-hidden="true">quiz</span>
+                    Frequently Asked Questions
+                </h2>
+                <div class="space-y-4">
+                    <details class="group bg-white dark:bg-surface-dark rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden open:shadow-md transition-shadow">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                            <h3 class="font-bold text-gray-900 dark:text-white">How do I change my home council?</h3>
+                            <span class="material-symbols-outlined text-gray-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300" aria-hidden="true">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0">
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                You can change your default council area in the Settings menu. Go to Profile &gt; Settings &gt; Location Preferences. Note that you can report issues in any council area regardless of your home setting; the app detects your current location automatically.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-slate-700">
+                                <span class="text-xs text-gray-400">Was this helpful?</span>
+                                <div class="flex gap-2">
+                                    <button class="p-1.5 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-full text-gray-400 hover:text-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_up</span>
+                                    </button>
+                                    <button class="p-1.5 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full text-gray-400 hover:text-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was not helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_down</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="group bg-white dark:bg-surface-dark rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden open:shadow-md transition-shadow">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                            <h3 class="font-bold text-gray-900 dark:text-white">The app says "Location not found". What do I do?</h3>
+                            <span class="material-symbols-outlined text-gray-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300" aria-hidden="true">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0">
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                Please ensure that Location Services are enabled for Active Residents in your phone's settings.
+                                <br/><br/>
+                                <strong>iOS:</strong> Settings &gt; Privacy &gt; Location Services &gt; Active Residents &gt; While Using the App.<br/>
+                                <strong>Android:</strong> Settings &gt; Location &gt; App permissions &gt; Active Residents &gt; Allow only while using the app.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-slate-700">
+                                <span class="text-xs text-gray-400">Was this helpful?</span>
+                                <div class="flex gap-2">
+                                    <button class="p-1.5 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-full text-gray-400 hover:text-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_up</span>
+                                    </button>
+                                    <button class="p-1.5 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full text-gray-400 hover:text-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was not helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_down</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="group bg-white dark:bg-surface-dark rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden open:shadow-md transition-shadow">
+                        <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                            <h3 class="font-bold text-gray-900 dark:text-white">Can I edit a report after submitting it?</h3>
+                            <span class="material-symbols-outlined text-gray-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300" aria-hidden="true">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-0">
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                Once a report is submitted to the council, the core details (location, photo) cannot be edited to preserve the chain of evidence. However, you can add "Updates" or "Comments" to your report thread if you have new information.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-slate-700">
+                                <span class="text-xs text-gray-400">Was this helpful?</span>
+                                <div class="flex gap-2">
+                                    <button class="p-1.5 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-full text-gray-400 hover:text-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_up</span>
+                                    </button>
+                                    <button class="p-1.5 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-full text-gray-400 hover:text-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="This was not helpful">
+                                        <span class="material-symbols-outlined text-lg" aria-hidden="true">thumb_down</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section class="scroll-mt-32" id="contact">
+                <div class="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-10 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div>
+                            <h2 class="font-display font-bold text-3xl mb-4">Still need help?</h2>
+                            <p class="text-blue-100 mb-6 max-w-md">
+                                Can't find what you're looking for? Our dedicated support team is here to assist you with any technical issues or inquiries.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a class="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" href="mailto:support@activeresidents.co.uk">
+                                    <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                                    Email Support
+                                </a>
+                                <a class="bg-blue-700 border border-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" href="#">
+                                    <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                                    Live Chat
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden md:block">
+                            <span class="material-symbols-outlined text-9xl text-white/20" aria-hidden="true">support_agent</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-white dark:bg-slate-900 pt-20 pb-10 border-t border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary text-white p-1.5 rounded-lg">
+                            <span class="material-symbols-outlined text-xl" aria-hidden="true">location_city</span>
+                        </div>
+                        <span class="font-display font-bold text-xl dark:text-white">Active<span class="text-primary">Residents</span></span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark max-w-sm">Empowering communities through technology. Building better neighborhoods, one report at a time.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Product</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Features</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">For Councils</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Company</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="privacy.html">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="support.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-slate-800 text-sm text-gray-500">
+                <div>© 2023 Active Residents Ltd. All rights reserved.</div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" aria-label="Facebook">Facebook</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" aria-label="Twitter">Twitter</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Check for saved theme preference or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isExpanded = mobileMenu.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+
+            const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = isExpanded ? 'close' : 'menu';
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+            });
+        });
+
+        // Search Functionality
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const mainContent = document.getElementById('main-content');
+
+        // Build search index from page content
+        function buildSearchIndex() {
+            const searchableElements = mainContent.querySelectorAll('.searchable-content h2, .searchable-content h3, .searchable-content p, details summary h3, details p');
+            const index = [];
+
+            searchableElements.forEach(element => {
+                const text = element.textContent.trim();
+                const section = element.closest('section');
+                const sectionId = section ? section.id : '';
+                const sectionTitle = section ? section.querySelector('h2').textContent.trim() : '';
+
+                index.push({
+                    text: text,
+                    element: element,
+                    sectionId: sectionId,
+                    sectionTitle: sectionTitle
+                });
+            });
+
+            return index;
+        }
+
+        const searchIndex = buildSearchIndex();
+
+        function performSearch(query) {
+            if (!query || query.length < 2) {
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            const lowerQuery = query.toLowerCase();
+            const results = searchIndex.filter(item =>
+                item.text.toLowerCase().includes(lowerQuery)
+            ).slice(0, 5); // Limit to 5 results
+
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="p-4 text-center text-gray-500 dark:text-gray-400">No results found</div>';
+                searchResults.classList.remove('hidden');
+                return;
+            }
+
+            const resultsHTML = results.map(result => {
+                const preview = result.text.substring(0, 100) + (result.text.length > 100 ? '...' : '');
+                return `
+                    <a href="#${result.sectionId}" class="block p-4 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors border-b border-gray-100 dark:border-slate-700 last:border-b-0 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <div class="font-bold text-sm text-primary mb-1">${result.sectionTitle}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">${preview}</div>
+                    </a>
+                `;
+            }).join('');
+
+            searchResults.innerHTML = resultsHTML;
+            searchResults.classList.remove('hidden');
+
+            // Add click handlers to close search results
+            searchResults.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    searchResults.classList.add('hidden');
+                    searchInput.value = '';
+                });
+            });
+        }
+
+        // Search on input
+        searchInput.addEventListener('input', (e) => {
+            performSearch(e.target.value);
+        });
+
+        // Search on form submit
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            performSearch(searchInput.value);
+        });
+
+        // Quick search links
+        document.querySelectorAll('[data-search]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const searchTerm = link.getAttribute('data-search');
+                searchInput.value = searchTerm;
+                performSearch(searchTerm);
+                searchInput.focus();
+            });
+        });
+
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchForm.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // ESC to close mobile menu
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+                mobileMenuToggle.focus();
+            }
+
+            // ESC to close search results
+            if (e.key === 'Escape' && !searchResults.classList.contains('hidden')) {
+                searchResults.classList.add('hidden');
+                searchInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

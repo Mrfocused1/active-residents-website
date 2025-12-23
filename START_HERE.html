@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Residents - Local Testing Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #64748B;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            border-radius: 2px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+            background: white;
+        }
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.2);
+            border-color: #3B82F6;
+        }
+        .btn-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .btn-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        .btn-desc {
+            font-size: 13px;
+            color: #64748B;
+            line-height: 1.4;
+        }
+        .btn.primary {
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            border: none;
+            color: white;
+        }
+        .btn.primary .btn-title,
+        .btn.primary .btn-desc {
+            color: white;
+        }
+        .btn.primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 32px rgba(59, 130, 246, 0.4);
+        }
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3B82F6;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .info-box-title {
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .info-box-content {
+            color: #1e40af;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        code {
+            background: #1e293b;
+            color: #3B82F6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+        }
+        .path {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+            color: #475569;
+            margin-top: 12px;
+            word-break: break-all;
+        }
+        .footer {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Active Residents</h1>
+        <p class="subtitle">Local Testing & Development Hub</p>
+
+        <div class="info-box">
+            <div class="info-box-title">📍 You're running locally</div>
+            <div class="info-box-content">
+                Click the buttons below to open each page in a new tab. All features are fully functional in local testing mode!
+            </div>
+        </div>
+
+        <!-- Website Pages -->
+        <div class="section">
+            <div class="section-title">🌐 Website Pages</div>
+            <div class="button-grid">
+                <a href="index.html" target="_blank" class="btn primary">
+                    <div class="btn-icon">🏠</div>
+                    <div class="btn-title">Landing Page</div>
+                    <div class="btn-desc">Main homepage with hero section and features</div>
+                </a>
+                <a href="support.html" target="_blank" class="btn">
+                    <div class="btn-icon">💬</div>
+                    <div class="btn-title">Support Center</div>
+                    <div class="btn-desc">Help center with live search functionality</div>
+                </a>
+                <a href="privacy.html" target="_blank" class="btn">
+                    <div class="btn-icon">🔒</div>
+                    <div class="btn-title">Privacy Policy</div>
+                    <div class="btn-desc">GDPR-compliant privacy policy</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Testing Tools -->
+        <div class="section">
+            <div class="section-title">🧪 Testing & Documentation</div>
+            <div class="button-grid">
+                <a href="test-functionality.html" target="_blank" class="btn">
+                    <div class="btn-icon">✅</div>
+                    <div class="btn-title">Testing Dashboard</div>
+                    <div class="btn-desc">Interactive checklist to test all features</div>
+                </a>
+                <a href="SETUP_GUIDE.md" target="_blank" class="btn">
+                    <div class="btn-icon">📖</div>
+                    <div class="btn-title">Setup Guide</div>
+                    <div class="btn-desc">Complete installation & configuration guide</div>
+                </a>
+                <a href="QUICK_REFERENCE.md" target="_blank" class="btn">
+                    <div class="btn-icon">⚡</div>
+                    <div class="btn-title">Quick Reference</div>
+                    <div class="btn-desc">Tips, shortcuts, and troubleshooting</div>
+                </a>
+                <a href="DEPLOYMENT_CHECKLIST.md" target="_blank" class="btn">
+                    <div class="btn-icon">🚀</div>
+                    <div class="btn-title">Deployment Guide</div>
+                    <div class="btn-desc">Step-by-step deployment instructions</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="section">
+            <div class="section-title">⚡ Quick Actions</div>
+            <div class="button-grid">
+                <a href="javascript:void(0)" onclick="testMobile()" class="btn">
+                    <div class="btn-icon">📱</div>
+                    <div class="btn-title">Test Mobile View</div>
+                    <div class="btn-desc">Opens DevTools mobile emulator</div>
+                </a>
+                <a href="javascript:void(0)" onclick="clearCache()" class="btn">
+                    <div class="btn-icon">🗑️</div>
+                    <div class="btn-title">Clear Cache</div>
+                    <div class="btn-desc">Reset dark mode & cookie consent</div>
+                </a>
+                <a href="javascript:void(0)" onclick="copyPath()" class="btn">
+                    <div class="btn-icon">📋</div>
+                    <div class="btn-title">Copy File Path</div>
+                    <div class="btn-desc">Copy local file path to clipboard</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- File Path -->
+        <div class="section">
+            <div class="section-title">📂 Project Location</div>
+            <div class="path" id="file-path">
+                file:///Users/paulbridges/active%20residents%20website/index.html
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="info-box" style="background: #dcfce7; border-left-color: #16a34a;">
+            <div class="info-box-title" style="color: #166534;">✅ Ready to Deploy</div>
+            <div class="info-box-content" style="color: #166534;">
+                All features tested and working. Google Analytics ID configured: <code style="background: #166534; color: white;">G-Z1X7CWVK8G</code>
+            </div>
+        </div>
+
+        <div class="footer">
+            Active Residents © 2023 • Built with ❤️ • Ready for Production
+        </div>
+    </div>
+
+    <script>
+        function testMobile() {
+            alert('To test mobile view:\n\n1. Press F12 to open DevTools\n2. Click the device icon (phone/tablet)\n3. Select a device (e.g., iPhone 12)\n4. Refresh the page\n\nOr press: Cmd+Shift+M (Mac) or Ctrl+Shift+M (Windows)');
+            window.open('index.html', '_blank');
+        }
+
+        function clearCache() {
+            try {
+                localStorage.clear();
+                sessionStorage.clear();
+                alert('✅ Cache cleared!\n\n• Dark mode preference reset\n• Cookie consent reset\n• Testing progress reset\n\nReload any open pages to see the changes.');
+            } catch(e) {
+                alert('⚠️ Could not clear cache: ' + e.message);
+            }
+        }
+
+        function copyPath() {
+            const path = document.getElementById('file-path').textContent;
+
+            // Try to copy to clipboard
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(path).then(() => {
+                    alert('✅ File path copied to clipboard!\n\nYou can now paste it into your browser address bar.');
+                }).catch(() => {
+                    fallbackCopy(path);
+                });
+            } else {
+                fallbackCopy(path);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                alert('✅ File path copied to clipboard!');
+            } catch(e) {
+                alert('Path:\n\n' + text + '\n\nPlease copy it manually.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Display current file location
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.href;
+            const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+            document.getElementById('file-path').textContent = basePath + '/index.html';
+        });
+    </script>
+</body>
+</html>

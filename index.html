@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Active Residents - Better Community, Together</title>
+    <meta content="Report community issues in seconds. Connect directly with your local council." name="description"/>
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="community issues, local council, report problems, UK councils, active residents, civic engagement"/>
+    <meta name="author" content="Active Residents Ltd"/>
+    <link rel="canonical" href="https://www.activeresidents.co.uk/"/>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Active Residents - Better Community, Together"/>
+    <meta property="og:description" content="Report community issues in seconds. Connect directly with your local council."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.activeresidents.co.uk/"/>
+    <meta property="og:image" content="https://www.activeresidents.co.uk/og-image.jpg"/>
+    <meta property="og:site_name" content="Active Residents"/>
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Active Residents - Better Community, Together"/>
+    <meta name="twitter:description" content="Report community issues in seconds. Connect directly with your local council."/>
+    <meta name="twitter:image" content="https://www.activeresidents.co.uk/og-image.jpg"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233B82F6' width='100' height='100' rx='20'/><text y='75' font-size='70' fill='white' font-family='Arial' x='50' text-anchor='middle'>AR</text></svg>"/>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6", // Royal Blue
+              "primary-hover": "#2563EB",
+              "background-light": "#F0F7FF", // Very light blue tint
+              "background-dark": "#0F172A", // Slate 900
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1E293B", // Slate 800
+              "text-main-light": "#1E293B",
+              "text-main-dark": "#F8FAFC",
+              "text-sub-light": "#64748B",
+              "text-sub-dark": "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Merriweather", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              'xl': '1.5rem',
+              '2xl': '2rem',
+              '3xl': '3rem',
+            },
+            boxShadow: {
+                'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                'glow': '0 0 20px rgba(59, 130, 246, 0.5)'
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #3B82F6, #8B5CF6);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-300 font-sans selection:bg-primary selection:text-white">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="glass-panel mx-4 mt-4 rounded-2xl px-6 py-4 shadow-soft max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Active Residents Home">
+                    <div class="bg-primary text-white p-1.5 rounded-lg">
+                        <span class="material-symbols-outlined text-xl" aria-hidden="true">location_city</span>
+                    </div>
+                    <span class="font-display font-bold text-lg tracking-tight">Active<span class="text-primary">Residents</span></span>
+                </a>
+                <nav class="hidden md:flex gap-8 font-medium text-sm text-text-sub-light dark:text-text-sub-dark" aria-label="Main navigation">
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#how-it-works">How it Works</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#features">Features</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#testimonials">Stories</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#coverage">Coverage</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined dark:hidden" aria-hidden="true">dark_mode</span>
+                        <span class="material-symbols-outlined hidden dark:block" aria-hidden="true">light_mode</span>
+                    </button>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 hidden sm:block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#download">
+                        Download App
+                    </a>
+                    <button class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu md:hidden mt-4" id="mobile-menu" aria-label="Mobile navigation">
+                <div class="flex flex-col gap-4 pb-4">
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#how-it-works">How it Works</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#features">Features</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#testimonials">Stories</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#coverage">Coverage</a>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 text-center sm:hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#download">
+                        Download App
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200 dark:bg-blue-900/30 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-purple-200 dark:bg-purple-900/30 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Live in 320+ UK Councils
+                </div>
+                <h1 class="font-display font-black text-5xl lg:text-6xl leading-tight text-main-light dark:text-main-dark">
+                    Report Community Issues in Seconds. <br/>
+                    <span class="text-gradient">See Real Results.</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-text-sub-light dark:text-text-sub-dark max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    Join thousands of active residents improving their neighborhoods. Snap a photo, send it off, and get notified when it's fixed.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button class="flex items-center gap-3 bg-primary text-white px-6 py-3.5 rounded-2xl hover:bg-primary-hover transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
+                        <span class="material-symbols-outlined text-2xl">ios</span>
+                        <div class="text-left leading-none">
+                            <div class="text-[10px] opacity-80 uppercase font-semibold">Download on the</div>
+                            <div class="text-base font-bold">App Store</div>
+                        </div>
+                    </button>
+                    <button class="flex items-center gap-3 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-text-main-light dark:text-text-main-dark px-6 py-3.5 rounded-2xl hover:bg-gray-50 dark:hover:bg-slate-700 transition-all hover:-translate-y-1">
+                        <span class="material-symbols-outlined text-2xl">android</span>
+                        <div class="text-left leading-none">
+                            <div class="text-[10px] opacity-80 uppercase font-semibold">Get it on</div>
+                            <div class="text-base font-bold">Google Play</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="pt-6 flex items-center gap-4 justify-center lg:justify-start text-sm text-text-sub-light dark:text-text-sub-dark">
+                    <div class="flex -space-x-3">
+                        <img alt="User" class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD16i5dHFvXRQREABfBTs3Xn5RpGPNgw4rl4YeA49cltp7094wBScrzfOmt4QwjVqzRnvtCmETN7fDjtLhs92t_4Uf0abJ6PXnIJPq3cCjMIrP8TPbzWdkt9OwFnLUEdJxi99SjvXkfLantaHmAsffvbI_XLKqr7lUz1knkW5b8xNAgaZ-sx4inmW9Ph3oJpoGrlybElG2JwA_Y9VZU4LnE6dNeWdXM0rXt3haLAt0hiZPN7P6pdQ5PUJlbmdQim_A38SRNPE5LYEU"/>
+                        <img alt="User" class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWu0wHDcYEcf9MrG-H65FqUXqI1qhRSNfmroilQAmuXLUBselxlKjIlwQG8rNyvEYBd4QaEf8Iq6-y7S74QInBo_0kmJV-RejsdI4jmOZB1iqVouRxpROlMEJ2ccTsOVnPdvUVwvd4dvjtMj3p4-9N_7B7kjVoYQ6S9t9oqahf4dVqnYt8KS-RXDmI5sALDkFgGLn8I7zdYkwnowAVPh6KNzlaWJLNO08rtJ86ByV3eTx9AmnBwsjUU6y-iJZlpNv4GilZwXMICGEX"/>
+                        <img alt="User" class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCecQCiUcNFnwquOP7DEo2Ee07KbiG2RZD0TbUf4vnLr2008aRZST4zwlJ2z7Ph3wTi36qNr9SaZ2gC-TF8oYszxg3ZVOfuDPbTJa0PsOGPdhIZlT2Ma-xTTY-CZJy9Wd3u7KsZGvozEPc_TLYv31xKQws44D2D9Y25gDY3-WP6ut04tl6OodrKASusuSEBpxgtLMfz43e8Nqifs7Os_UE4O2NRYefN5VIkvlHYK3UcTLlfxEnNxGGjZDan2EMZ1ZMsiFnXd11d9Unp"/>
+                        <div class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 bg-gray-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold text-gray-600 dark:text-gray-300">+2k</div>
+                    </div>
+                    <span>Residents joined this week</span>
+                </div>
+            </div>
+            <div class="relative lg:h-[700px] flex items-center justify-center perspective-1000 mt-12 lg:mt-0">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-3xl transform scale-75"></div>
+                <div class="absolute top-10 right-0 lg:right-10 w-64 h-80 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 border-4 border-white dark:border-slate-700 animate-float-delayed z-0 hidden lg:block">
+                    <img alt="Active Resident" class="w-full h-full object-cover opacity-90 hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFGdBRhHz7VMpLHl_hmhKKqyL1Ln0nC2ML1Acj4EIWdJMo02gXNulFfd4GtlKv9hJgsvbORhRxbzIQ1jitljYUwPzoGauvfK5xUTVneGdmt3cY9qvGb5qwLc6Xt5ajakNeziuaqk7xv6oe2eCA8YlYXzZBfzOpom0uJ-7E-3xmILDkyWewazRHr8Nh47QO3SqFPNQOwFbAQNlGnpEAVitjEGMvAKZgs_fl6c9bJTCIH5mlVfkoeWECXfgNk3FaXdJI8HDtPvaIyI8E"/>
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                        <p class="text-white text-xs font-medium">Sarah reported a pothole</p>
+                        <p class="text-white/80 text-[10px]">Fixed in 2 days</p>
+                    </div>
+                </div>
+                <div class="relative z-10 w-[300px] lg:w-[340px] border-[12px] border-gray-900 dark:border-slate-800 rounded-[3rem] shadow-2xl bg-white dark:bg-gray-900 overflow-hidden animate-float">
+                    <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 dark:bg-slate-800 z-20 rounded-b-xl w-40 mx-auto"></div>
+                    <div class="h-[650px] bg-background-light dark:bg-slate-900 overflow-hidden flex flex-col relative">
+                        <div class="h-10 w-full bg-white dark:bg-slate-900 flex items-end justify-between px-6 pb-2 text-[10px] font-bold">
+                            <span>9:41</span>
+                            <div class="flex gap-1">
+                                <span class="material-symbols-outlined text-[12px]">signal_cellular_alt</span>
+                                <span class="material-symbols-outlined text-[12px]">wifi</span>
+                                <span class="material-symbols-outlined text-[12px]">battery_full</span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold font-display dark:text-white">Good Morning</h3>
+                                    <p class="text-xs text-gray-500">Ready to help your community?</p>
+                                </div>
+                                <img alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD16i5dHFvXRQREABfBTs3Xn5RpGPNgw4rl4YeA49cltp7094wBScrzfOmt4QwjVqzRnvtCmETN7fDjtLhs92t_4Uf0abJ6PXnIJPq3cCjMIrP8TPbzWdkt9OwFnLUEdJxi99SjvXkfLantaHmAsffvbI_XLKqr7lUz1knkW5b8xNAgaZ-sx4inmW9Ph3oJpoGrlybElG2JwA_Y9VZU4LnE6dNeWdXM0rXt3haLAt0hiZPN7P6pdQ5PUJlbmdQim_A38SRNPE5LYEU"/>
+                            </div>
+                            <div class="bg-primary text-white p-5 rounded-2xl shadow-lg shadow-blue-500/30 flex items-center justify-between mb-6 cursor-pointer hover:bg-primary-hover transition-colors">
+                                <div>
+                                    <div class="font-bold text-lg">New Report</div>
+                                    <div class="text-blue-100 text-xs">Snap photo &amp; send</div>
+                                </div>
+                                <div class="bg-white/20 p-2 rounded-xl">
+                                    <span class="material-symbols-outlined text-2xl">camera_alt</span>
+                                </div>
+                            </div>
+                            <h4 class="font-bold text-sm mb-3 text-gray-800 dark:text-gray-200">Recent Updates</h4>
+                            <div class="space-y-3">
+                                <div class="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 flex gap-3 items-center">
+                                    <div class="w-12 h-12 bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span class="material-symbols-outlined text-yellow-500">light_mode</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between items-start">
+                                            <h5 class="font-bold text-xs truncate dark:text-white">Broken Street Light</h5>
+                                            <span class="bg-green-100 text-green-700 text-[9px] px-1.5 py-0.5 rounded font-bold">FIXED</span>
+                                        </div>
+                                        <p class="text-[10px] text-gray-500 truncate">High St. • 2 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 flex gap-3 items-center">
+                                    <div class="w-12 h-12 bg-gray-100 dark:bg-slate-700 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOCA8_cS2_m7yngtqaiC3-7oOK_LBJ1gwIZMrMpismejtrSYsDi4Xv5XP9NGZRCpqs52XszYLUqTrMLyejBCcTGrSH9j4bIVV_x31hivDU-3bb1peov2TbYULGuB-mTrTWBm2TexK3Azbq4Zm9obaemq3Uz6XPv9UXD-YqQ0BYSqBCK3JFpfQkojVKJweyHIAnZhK5WZP0x21HY8h_5XNJOldIYtiYFsNnOtd2TdI5GSudhidoJG6VNIXEMex-OvJsnPYu2OaVpE"/>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between items-start">
+                                            <h5 class="font-bold text-xs truncate dark:text-white">Fly-tipping</h5>
+                                            <span class="bg-blue-100 text-blue-700 text-[9px] px-1.5 py-0.5 rounded font-bold">SENT</span>
+                                        </div>
+                                        <p class="text-[10px] text-gray-500 truncate">Park Lane • 5 mins ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6 rounded-2xl overflow-hidden h-32 relative bg-slate-200">
+                                <div class="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=London&zoom=13&size=600x300&sensor=false')] bg-cover bg-center opacity-50"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <button class="bg-white dark:bg-slate-800 px-4 py-2 rounded-full text-xs font-bold shadow-md flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-sm text-primary">map</span> View Map
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-white dark:bg-surface-dark border-y border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-sm font-semibold text-text-sub-light dark:text-text-sub-dark uppercase tracking-widest mb-8">Trusted by leading local authorities</p>
+            <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 font-display font-bold text-xl dark:text-white"><span class="material-symbols-outlined">account_balance</span> WESTMINSTER</div>
+                <div class="flex items-center gap-2 font-display font-bold text-xl dark:text-white"><span class="material-symbols-outlined">account_balance</span> CAMDEN</div>
+                <div class="flex items-center gap-2 font-display font-bold text-xl dark:text-white"><span class="material-symbols-outlined">account_balance</span> ISLINGTON</div>
+                <div class="flex items-center gap-2 font-display font-bold text-xl dark:text-white"><span class="material-symbols-outlined">account_balance</span> HACKNEY</div>
+                <div class="flex items-center gap-2 font-display font-bold text-xl dark:text-white hidden md:flex"><span class="material-symbols-outlined">account_balance</span> BRISTOL</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-red-100 dark:bg-red-900/20 rounded-[2.5rem] transform -rotate-3"></div>
+                    <img alt="Frustrated resident with community issue" class="relative rounded-[2rem] shadow-xl w-full object-cover h-[400px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Niw9AyMhER_YXdJEBgvL3CTPozMG7NHBfAoEeIG5JXGgbS-3eyinbHONYdqwq9BupKTgzI4bPMFXiRKj2Wrzt44CXnkv5UXwUrUO_VkSmPzxPfcnGYNpEU1aKyWVhBeQqT0LQw2YejnY0O-mUFrUWKMAlxb9MSrNju6HolivFOQbhRA-ibuzZHL0IkdFYPgUW6L_b6c3QZcUGBbw-tD8yxmCxLtfOHaTMh6lOLF9ANZUMd6eb7pXQg5lUDGLLcX6vMvie8q3ECJb"/>
+                    <div class="absolute -bottom-6 -right-6 bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-lg max-w-xs border border-gray-100 dark:border-slate-700">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-500 text-3xl">sentiment_dissatisfied</span>
+                            <div>
+                                <p class="font-bold text-sm dark:text-white">"I called three times..."</p>
+                                <p class="text-xs text-gray-500 mt-1">Typical reporting experience takes 20+ mins and rarely gets feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="font-display font-bold text-3xl lg:text-4xl mb-6 text-main-light dark:text-main-dark">Traditional reporting is <span class="text-red-500">broken.</span></h2>
+                    <p class="text-lg text-text-sub-light dark:text-text-sub-dark mb-6 leading-relaxed">
+                        Long hold times, confusing websites, and zero updates. It's no wonder small issues turn into big problems. Residents feel unheard, and councils get overwhelmed with duplicate, unclear reports.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-text-sub-light dark:text-text-sub-dark">
+                            <span class="material-symbols-outlined text-red-400">close</span>
+                            <span>No visual proof of issues</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-sub-light dark:text-text-sub-dark">
+                            <span class="material-symbols-outlined text-red-400">close</span>
+                            <span>Uncertain location data</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-sub-light dark:text-text-sub-dark">
+                            <span class="material-symbols-outlined text-red-400">close</span>
+                            <span>Lack of transparency on fixes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-surface-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-blue-100 dark:bg-blue-900/20 rounded-[2.5rem] transform rotate-3"></div>
+                    <img alt="Happy residents in clean street" class="relative rounded-[2rem] shadow-xl w-full object-cover h-[400px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCngSytjEiY6V-a-c3TyDjxM3w9bW6-ucJ_xDqXr1KbspOlOHHEzHkD9dWgPV_1ly_lTPd1QvSmyR2apuG-8QfUqw9b0DY2fIdsvp9rKCkjjZQ9tX3pvSWp_VNFeNdbt8LSjtG4C2pIqf0qx4fGBzdU_r1pKAQl-H7lM9XBnt9Zi0XmAAEsNAnxmLTrzGLsykoycIvMmJUWEhBvz7-r-QXyyFwxQ7TDsi9Hw3lXtU7YG5nR_3OUdVA0qGMLWi3FhaLxy9jCukt2--cU"/>
+                    <div class="absolute -bottom-6 -left-6 bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-lg max-w-xs border border-gray-100 dark:border-slate-700">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-green-500 text-3xl">sentiment_satisfied_alt</span>
+                            <div>
+                                <p class="font-bold text-sm dark:text-white">"Fixed in 24 hours!"</p>
+                                <p class="text-xs text-gray-500 mt-1">Automated routing means the right team gets the job instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-full text-xs font-bold uppercase tracking-wide mb-4">The Solution</div>
+                    <h2 class="font-display font-bold text-3xl lg:text-4xl mb-6 text-main-light dark:text-main-dark">Empowering you to make a <span class="text-primary">change.</span></h2>
+                    <p class="text-lg text-text-sub-light dark:text-text-sub-dark mb-6 leading-relaxed">
+                        We bridge the gap between you and your local council with modern technology. Report issues as you see them, and track their progress until they're resolved.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-4 bg-gray-50 dark:bg-slate-800 rounded-2xl">
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl">gps_fixed</span>
+                            <h4 class="font-bold dark:text-white">Pinpoint Accuracy</h4>
+                            <p class="text-xs text-gray-500 mt-1">GPS integration sends the exact location.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-slate-800 rounded-2xl">
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl">add_a_photo</span>
+                            <h4 class="font-bold dark:text-white">Photo Evidence</h4>
+                            <p class="text-xs text-gray-500 mt-1">A picture says a thousand words.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="features">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="font-display font-bold text-3xl lg:text-4xl mb-4 text-text-main-light dark:text-text-main-dark">Key Features</h2>
+            <p class="text-text-sub-light dark:text-text-sub-dark max-w-2xl mx-auto">Everything you need to be an active citizen.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/40 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">smartphone</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 dark:text-white">Mobile First</h3>
+                <p class="text-text-sub-light dark:text-text-sub-dark">Designed for use on the go. One-handed reporting that takes less than 30 seconds.</p>
+            </div>
+            <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/40 rounded-2xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">notifications_active</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 dark:text-white">Live Updates</h3>
+                <p class="text-text-sub-light dark:text-text-sub-dark">Get push notifications when the council views your report and when the job is done.</p>
+            </div>
+            <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">history_edu</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 dark:text-white">History Log</h3>
+                <p class="text-text-sub-light dark:text-text-sub-dark">Keep track of all your contributions to the community in one organized dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-surface-dark" id="how-it-works">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-bold text-3xl lg:text-4xl mb-4 text-text-main-light dark:text-text-main-dark">How It Works</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-100 dark:bg-slate-700 -z-10"></div>
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-surface-dark border-4 border-blue-50 dark:border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <span class="material-symbols-outlined text-4xl text-primary">photo_camera</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 dark:text-white">1. Spot &amp; Snap</h3>
+                    <p class="text-sm text-gray-500">Take a photo of the issue. Our app automatically tags the location.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-surface-dark border-4 border-blue-50 dark:border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <span class="material-symbols-outlined text-4xl text-primary">send</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 dark:text-white">2. Submit</h3>
+                    <p class="text-sm text-gray-500">Categorize the issue and hit send. It routes directly to the correct team.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-surface-dark border-4 border-blue-50 dark:border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <span class="material-symbols-outlined text-4xl text-primary">check_circle</span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 dark:text-white">3. Resolve</h3>
+                    <p class="text-sm text-gray-500">The council fixes it. You get a notification and a photo of the repair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden" id="coverage">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-primary rounded-[3rem] p-10 lg:p-16 text-white relative">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542665174-31db64d7e0e4?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <h2 class="font-display font-bold text-3xl lg:text-4xl mb-6">Nationwide Coverage</h2>
+                        <p class="text-blue-100 text-lg mb-8">
+                            Whether you're in a city borough or a rural county, Active Residents intelligent routing system ensures your report lands on the right desk.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined">domain</span>
+                                <div class="font-bold">320+ Councils</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined">public</span>
+                                <div class="font-bold">100% UK Coverage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl">
+                        <h3 class="font-bold text-xl mb-4">Integration Showcase</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-green-100 p-2 rounded-lg">
+                                        <span class="material-symbols-outlined text-green-600">api</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Direct API</div>
+                                        <div class="text-xs text-gray-500">Real-time sync</div>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-purple-100 p-2 rounded-lg">
+                                        <span class="material-symbols-outlined text-purple-600">security</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">GovTech Secure</div>
+                                        <div class="text-xs text-gray-500">ISO 27001 Certified</div>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="bg-orange-100 p-2 rounded-lg">
+                                        <span class="material-symbols-outlined text-orange-600">analytics</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-sm">Analytics Dashboard</div>
+                                        <div class="text-xs text-gray-500">For council admins</div>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-surface-dark border-b border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="space-y-2">
+                <div class="font-display font-bold text-4xl lg:text-5xl text-primary">150k+</div>
+                <div class="text-gray-500 font-medium">Issues Fixed</div>
+            </div>
+            <div class="space-y-2">
+                <div class="font-display font-bold text-4xl lg:text-5xl text-primary">320</div>
+                <div class="text-gray-500 font-medium">Active Councils</div>
+            </div>
+            <div class="space-y-2">
+                <div class="font-display font-bold text-4xl lg:text-5xl text-primary">98%</div>
+                <div class="text-gray-500 font-medium">Resolution Rate</div>
+            </div>
+            <div class="space-y-2">
+                <div class="font-display font-bold text-4xl lg:text-5xl text-primary">4.9</div>
+                <div class="text-gray-500 font-medium">App Store Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="testimonials">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl lg:text-4xl mb-12 text-center text-text-main-light dark:text-text-main-dark">Community Stories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft flex flex-col">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark mb-6 flex-grow">"I reported a massive pothole that had been there for months. Within 2 days of using Active Residents, the council filled it. Incredible!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZxvWVkzMgje2W8XExtL4vXuAuqG1IveAc5I3bc2PI6W3APGlWCK-aEp1nQJxt65WQNMGK3PIkMcXg09GkjTDkB0REa0cz0yOxxHOQKCOJ9ujuEe2DCNt8R_3etuggBt5_IWE8f04P-gu1282I8x-ClTE5pCC6VAZmy_WqiQElvpeQRrDP2HddXLnb-n17hGkoWzAghEOBsPAHoZiQaZJFCyd94atPSP-Fl91nxHJgBVkJCRDA8qThu6KHmBz7y_DyxhHg6B-CEoI"/>
+                        <div>
+                            <div class="font-bold dark:text-white">Emily R.</div>
+                            <div class="text-xs text-gray-500">Manchester</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft flex flex-col">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark mb-6 flex-grow">"Super easy to use. The location feature is spot on, and I love getting updates so I'm not wondering if anyone saw my report."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb252AyAKmYNfisfuBTkjZaEzsHDqdB7uwO8OJjd3Zb95YzJDFa2cKav6Xolhnss1gIjGtHJERcSmNIVhnvdIMmlIEdNLDH4Rrok7wpoft7vtjKMroxYVJR0COot3aWS2Q0G5KSyY3M53bVStZVtGJ_CZQYN5cKYZLaYhla4mWX25KVdhgW_94Yuld2WSm9kgJ7m4V6LdNQaZ4_6YT4auxuPiHNtoBKEFn8O2N2Os6KP_eK85V4vmKAOUWDVyvVAsaMf_79JaNlEi0"/>
+                        <div>
+                            <div class="font-bold dark:text-white">James T.</div>
+                            <div class="text-xs text-gray-500">Leeds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-slate-700 shadow-soft flex flex-col">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star</span>
+                        <span class="material-symbols-outlined fill-current">star_half</span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark mb-6 flex-grow">"Finally an app that actually connects to the council systems properly. It feels good to help clean up my street."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlUEUJmRUcMIoljBef7wad0lLdQRdM_wRE6ggs0INiAeaXTcStmTYsfN-C6twGh0NjyBun9n6MFSlaLEmlKPJ0ioe4djNsutHVcP2JLXY5KIi36HAZAan5DMI806VveHDrLuMdxNW625FDQztGq4Cg9wnrKZ8b7UKsR9WbjETLOl3mFYEh_SHvYeSIPjI4Oqcw9H8wOpsDfXbgNBTcXaNASBFyTm62PIbaCQyE-EI8ZsInePhY3p7n50W8znUCeJfYLiSNZk5eMWEO"/>
+                        <div>
+                            <div class="font-bold dark:text-white">Sarah K.</div>
+                            <div class="text-xs text-gray-500">Bristol</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white dark:bg-surface-dark">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl mb-12 text-center dark:text-white">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="group bg-background-light dark:bg-slate-900 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-bold dark:text-white">
+                        Is the app free to use?
+                        <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-text-sub-light dark:text-text-sub-dark leading-relaxed">Yes! Active Residents is 100% free for residents. We are funded by local councils to help them manage their workflow more efficiently.</p>
+                </details>
+                <details class="group bg-background-light dark:bg-slate-900 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-bold dark:text-white">
+                        Which councils are supported?
+                        <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-text-sub-light dark:text-text-sub-dark leading-relaxed">We support reporting to all UK local authorities. If your specific council hasn't fully integrated with our real-time status API yet, we send the report via email and track it manually.</p>
+                </details>
+                <details class="group bg-background-light dark:bg-slate-900 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                    <summary class="flex items-center justify-between font-bold dark:text-white">
+                        Can I report anonymously?
+                        <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-4 text-text-sub-light dark:text-text-sub-dark leading-relaxed">Yes. While creating an account helps you track history, you can submit "Guest Reports" which do not require personal details.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6" id="download">
+        <div class="bg-primary rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+            <div class="relative z-10">
+                <h2 class="font-display font-bold text-3xl lg:text-5xl text-white mb-6">Ready to improve your neighborhood?</h2>
+                <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">Join thousands of active residents making a visible difference every single day.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-primary px-8 py-4 rounded-2xl font-bold hover:bg-gray-50 transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">ios</span> Download on iOS
+                    </button>
+                    <button class="bg-blue-600 border border-blue-400 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">android</span> Get on Android
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-slate-900 pt-20 pb-10 border-t border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary text-white p-1.5 rounded-lg">
+                            <span class="material-symbols-outlined text-xl">location_city</span>
+                        </div>
+                        <span class="font-display font-bold text-xl dark:text-white">Active<span class="text-primary">Residents</span></span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark max-w-sm">Empowering communities through technology. Building better neighborhoods, one report at a time.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Product</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">For Councils</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Company</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="support.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-slate-800 text-sm text-gray-500">
+                <div>© 2023 Active Residents Ltd. All rights reserved.</div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">Facebook</a>
+                    <a class="hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-2xl border border-gray-100 dark:border-slate-700 z-50 animate-bounce-in hidden" id="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-description">
+        <h4 id="cookie-banner-title" class="font-bold mb-2 dark:text-white flex items-center gap-2">We use cookies <span class="text-xl" role="img" aria-label="Cookie">🍪</span></h4>
+        <p id="cookie-banner-description" class="text-sm text-text-sub-light dark:text-text-sub-dark mb-4">We use cookies and analytics to improve your experience and understand how our site is used. <a href="privacy.html" class="text-primary hover:underline">Learn more</a></p>
+        <div class="flex gap-3">
+            <button class="flex-1 bg-primary text-white py-2 rounded-xl text-sm font-bold hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" id="accept-cookies" aria-label="Accept cookies and analytics">Accept All</button>
+            <button class="flex-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 py-2 rounded-xl text-sm font-bold hover:bg-gray-200 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2" id="decline-cookies" aria-label="Decline optional cookies">Essential Only</button>
+        </div>
+    </div>
+
+    <!-- Google Analytics (conditional load based on consent) -->
+    <script>
+        // Analytics initialization function
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        function initAnalytics() {
+            // Google Analytics ID for Active Residents
+            const GA_ID = 'G-Z1X7CWVK8G';
+
+            // Load Google Analytics script
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+            gtag('config', GA_ID, {
+                'anonymize_ip': true,
+                'cookie_flags': 'SameSite=None;Secure'
+            });
+        }
+
+        // Check for existing consent
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        if (cookieConsent === 'accepted') {
+            initAnalytics();
+        }
+    </script>
+
+    <script>
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Check for saved theme preference or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isExpanded = mobileMenu.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+
+            // Change icon
+            const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = isExpanded ? 'close' : 'menu';
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+            });
+        });
+
+        // Cookie Consent Management
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookies = document.getElementById('accept-cookies');
+        const declineCookies = document.getElementById('decline-cookies');
+
+        acceptCookies.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.style.display = 'none';
+            initAnalytics();
+
+            // Track consent event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cookie_consent', {
+                    'consent_status': 'accepted'
+                });
+            }
+        });
+
+        declineCookies.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieBanner.style.display = 'none';
+        });
+
+        // Show cookie banner if no preference is set
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        if (!cookieConsent) {
+            setTimeout(() => {
+                cookieBanner.classList.remove('hidden');
+            }, 1500);
+        }
+
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', (e) => {
+            // ESC to close mobile menu
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+                mobileMenuToggle.focus();
+            }
+
+            // ESC to close cookie banner
+            if (e.key === 'Escape' && !cookieBanner.classList.contains('hidden')) {
+                cookieBanner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

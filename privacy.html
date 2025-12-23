@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Privacy Policy - Active Residents</title>
+    <meta content="Privacy Policy for Active Residents application." name="description"/>
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Active Residents privacy policy, data protection, GDPR, UK privacy"/>
+    <meta name="author" content="Active Residents Ltd"/>
+    <link rel="canonical" href="https://www.activeresidents.co.uk/privacy.html"/>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Privacy Policy - Active Residents"/>
+    <meta property="og:description" content="Privacy Policy for Active Residents application."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.activeresidents.co.uk/privacy.html"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233B82F6' width='100' height='100' rx='20'/><text y='75' font-size='70' fill='white' font-family='Arial' x='50' text-anchor='middle'>AR</text></svg>"/>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6", // Royal Blue
+              "primary-hover": "#2563EB",
+              "background-light": "#F4F7FE", // Updated to user request #F4F7FE
+              "background-dark": "#0F172A", // Slate 900
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1E293B", // Slate 800
+              "text-main-light": "#333344", // Updated to user request #333344
+              "text-main-dark": "#F8FAFC",
+              "text-sub-light": "#64748B",
+              "text-sub-dark": "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Merriweather", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              'xl': '1.5rem',
+              '2xl': '2rem',
+              '3xl': '3rem',
+            },
+            boxShadow: {
+                'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                'glow': '0 0 20px rgba(59, 130, 246, 0.5)'
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #3B82F6, #8B5CF6);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-300 font-sans selection:bg-primary selection:text-white">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="glass-panel mx-4 mt-4 rounded-2xl px-6 py-4 shadow-soft max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <a class="flex items-center gap-2" href="index.html" aria-label="Active Residents Home">
+                    <div class="bg-primary text-white p-1.5 rounded-lg">
+                        <span class="material-symbols-outlined text-xl" aria-hidden="true">location_city</span>
+                    </div>
+                    <span class="font-display font-bold text-lg tracking-tight text-text-main-light dark:text-white">Active<span class="text-primary">Residents</span></span>
+                </a>
+                <nav class="hidden md:flex gap-8 font-medium text-sm text-text-sub-light dark:text-text-sub-dark" aria-label="Main navigation">
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="index.html">Home</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">About</a>
+                    <a class="text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="privacy.html" aria-current="page">Privacy</a>
+                    <a class="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded" href="support.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined dark:hidden" aria-hidden="true">dark_mode</span>
+                        <span class="material-symbols-outlined hidden dark:block" aria-hidden="true">light_mode</span>
+                    </button>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 hidden sm:block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#">
+                        Download App
+                    </a>
+                    <button class="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors text-text-sub-light dark:text-text-sub-dark focus:outline-none focus:ring-2 focus:ring-primary" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu md:hidden mt-4" id="mobile-menu" aria-label="Mobile navigation">
+                <div class="flex flex-col gap-4 pb-4">
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="index.html">Home</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">About</a>
+                    <a class="text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="privacy.html" aria-current="page">Privacy</a>
+                    <a class="hover:text-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-primary rounded" href="support.html">Contact</a>
+                    <a class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg shadow-blue-500/30 text-center sm:hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" href="#">
+                        Download App
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 lg:pt-40">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-16 shadow-soft border border-gray-100 dark:border-slate-800">
+                <div class="text-center mb-12 border-b border-gray-100 dark:border-slate-700 pb-12">
+                    <h1 class="font-display font-bold text-3xl lg:text-4xl text-text-main-light dark:text-white mb-4 uppercase tracking-tight">Privacy Policy for Active Residents</h1>
+                    <p class="text-text-sub-light dark:text-text-sub-dark font-medium">Last Updated: October 26, 2023</p>
+                </div>
+
+                <div class="mb-12 bg-background-light dark:bg-slate-900/50 rounded-2xl p-6 lg:p-8">
+                    <h2 class="font-bold text-xl mb-6 dark:text-white">Table of Contents</h2>
+                    <nav class="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#introduction">1. Introduction</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#information-we-collect">2. Information We Collect</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#how-we-use">3. How We Use Your Information</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#how-we-share">4. How We Share Your Information</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#data-security">5. Data Security</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#data-retention">6. Data Retention</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#your-rights">7. Your Rights and Choices</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#childrens-privacy">8. Children's Privacy</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#third-party-links">9. Third-Party Links and Services</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#cookies">10. Cookies and Tracking</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#international-transfers">11. International Data Transfers</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#changes">12. Changes to This Policy</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#legal-basis">13. Legal Basis (UK GDPR)</a>
+                        <a class="text-primary hover:text-primary-hover hover:underline" href="#contact-us">14. Contact Us</a>
+                    </nav>
+                </div>
+
+                <div class="prose prose-slate prose-lg dark:prose-invert max-w-none space-y-12 text-text-main-light dark:text-gray-300">
+                    <section id="introduction">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">1. Introduction</h2>
+                        <p>
+                            Welcome to Active Residents. We are committed to protecting your privacy and ensuring you have a positive experience on our website and in using our app. This policy outlines our handling practices and how we collect and use the Personal Data you provide during your interactions with us.
+                        </p>
+                        <p>
+                            "Active Residents" empowers UK residents to report community issues directly to their local councils. By using our service, you agree to the collection and use of information in accordance with this policy.
+                        </p>
+                    </section>
+
+                    <section id="information-we-collect">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">2. Information We Collect</h2>
+                        <p class="mb-4">We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">Personal Information</h3>
+                                <p>
+                                    When you register for an account, we may ask for personally identifiable information, such as your:
+                                </p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>Full Name</li>
+                                    <li>Email Address</li>
+                                    <li>Phone Number</li>
+                                    <li>Address / Postcode</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">Location Information</h3>
+                                <p>
+                                    To report community issues accurately, we collect geolocation data from your device when you use the app to pinpoint the location of the issue.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">Content You Create</h3>
+                                <p>
+                                    We collect the photos, descriptions, and categories of the issues you report. Please note that photos submitted may be shared with local councils and visible on public maps if you choose to make your report public.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">Automatically Collected Information</h3>
+                                <p>
+                                    We may collect information about your device, including the IP address, operating system, browser type, and usage data (like time spent on pages) to help us analyze and improve our service.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="how-we-use">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">3. How We Use Your Information</h2>
+                        <p class="mb-4">We use the collected data for various purposes:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>To provide and maintain the Active Residents service.</li>
+                            <li>To notify you about changes to our service.</li>
+                            <li>To allow you to participate in interactive features when you choose to do so.</li>
+                            <li>To facilitate the reporting of issues to appropriate Local Councils.</li>
+                            <li>To provide customer support and respond to inquiries.</li>
+                            <li>To gather analysis or valuable information so that we can improve our service.</li>
+                            <li>To monitor the usage of the service and detect/prevent technical issues.</li>
+                        </ul>
+                    </section>
+
+                    <section id="how-we-share">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">4. How We Share Your Information</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">With Local Councils</h3>
+                                <p>
+                                    The core function of our app is to report issues. We share your report details (photo, description, location) and, if necessary for follow-up, your contact information with the relevant Local Council authority.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">With Service Providers</h3>
+                                <p>
+                                    We may employ third-party companies and individuals to facilitate our service ("Service Providers"), to provide the service on our behalf, or to assist us in analyzing how our service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">With Other Users</h3>
+                                <p>
+                                    If you choose to make a report "Public," the photo, description, and location will be visible to other users of the app. Your personal contact details remain private.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">For Legal Reasons</h3>
+                                <p>
+                                    We may disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg dark:text-white mb-2">In Business Transfers</h3>
+                                <p>
+                                    If Active Residents is involved in a merger, acquisition, or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="data-security">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">5. Data Security</h2>
+                        <p>
+                            The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security. We utilize industry-standard encryption (SSL/TLS) for data in transit and at rest.
+                        </p>
+                    </section>
+
+                    <section id="data-retention">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">6. Data Retention</h2>
+                        <p>
+                            We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+                        </p>
+                    </section>
+
+                    <section id="your-rights">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">7. Your Rights and Choices</h2>
+                        <p class="mb-4">Depending on your location, you may have the following rights regarding your personal information:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Access:</strong> The right to request copies of your personal data.</li>
+                            <li><strong>Rectification:</strong> The right to request that we correct any information you believe is inaccurate.</li>
+                            <li><strong>Erasure:</strong> The right to request that we erase your personal data, under certain conditions.</li>
+                            <li><strong>Restrict Processing:</strong> The right to request that we restrict the processing of your personal data.</li>
+                            <li><strong>Object to Processing:</strong> The right to object to our processing of your personal data.</li>
+                            <li><strong>Data Portability:</strong> The right to request that we transfer the data that we have collected to another organization, or directly to you.</li>
+                        </ul>
+                        <p class="mt-4">
+                            To exercise any of these rights, please contact us at privacy@activeresidents.co.uk.
+                        </p>
+                    </section>
+
+                    <section id="childrens-privacy">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">8. Children's Privacy</h2>
+                        <p>
+                            Our Service does not address anyone under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your Children have provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.
+                        </p>
+                    </section>
+
+                    <section id="third-party-links">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">9. Third-Party Links and Services</h2>
+                        <p>
+                            Our Service may contain links to other sites that are not operated by us (e.g., local council websites). If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.
+                        </p>
+                    </section>
+
+                    <section id="cookies">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">10. Cookies and Tracking Technologies</h2>
+                        <p>
+                            We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
+                        </p>
+                    </section>
+
+                    <section id="international-transfers">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">11. International Data Transfers</h2>
+                        <p>
+                            Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction. If you are located outside the United Kingdom and choose to provide information to us, please note that we transfer the data, including Personal Data, to the United Kingdom and process it there.
+                        </p>
+                    </section>
+
+                    <section id="changes">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">12. Changes to This Privacy Policy</h2>
+                        <p>
+                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.
+                        </p>
+                    </section>
+
+                    <section id="legal-basis">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">13. Legal Basis for Processing (UK GDPR)</h2>
+                        <p class="mb-4">
+                            If you are from the European Economic Area (EEA) or the UK, Active Residents' legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it. We may process your Personal Data because:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>We need to perform a contract with you (i.e., to provide our Service).</li>
+                            <li>You have given us permission to do so.</li>
+                            <li>The processing is in our legitimate interests and it's not overridden by your rights.</li>
+                            <li>To comply with the law.</li>
+                        </ul>
+                    </section>
+
+                    <section id="contact-us">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">14. Contact Us</h2>
+                        <p class="mb-4">
+                            If you have any questions about this Privacy Policy, please contact us:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>By email: <a class="text-primary hover:underline" href="mailto:privacy@activeresidents.co.uk">privacy@activeresidents.co.uk</a></li>
+                            <li>By visiting this page on our website: <a class="text-primary hover:underline" href="#">www.activeresidents.co.uk/contact</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="your-right-to-complain">
+                        <h2 class="font-display font-bold text-2xl text-text-main-light dark:text-white mb-4 uppercase tracking-wide">15. Your Right to Complain</h2>
+                        <p>
+                            If you are not satisfied with our response or believe we are processing your personal data not in accordance with the law, you can complain to the Information Commissioner's Office (ICO) in the UK.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 pt-20 pb-10 border-t border-gray-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary text-white p-1.5 rounded-lg">
+                            <span class="material-symbols-outlined text-xl">location_city</span>
+                        </div>
+                        <span class="font-display font-bold text-xl dark:text-white">Active<span class="text-primary">Residents</span></span>
+                    </div>
+                    <p class="text-text-sub-light dark:text-text-sub-dark max-w-sm">Empowering communities through technology. Building better neighborhoods, one report at a time.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Product</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">For Councils</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 dark:text-white">Company</h4>
+                    <ul class="space-y-4 text-text-sub-light dark:text-text-sub-dark text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="support.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-slate-800 text-sm text-gray-500">
+                <div>© 2023 Active Residents Ltd. All rights reserved. Last Updated: October 26, 2023</div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">Facebook</a>
+                    <a class="hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Check for saved theme preference or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isExpanded = mobileMenu.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+
+            const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = isExpanded ? 'close' : 'menu';
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // ESC to close mobile menu
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
+                mobileMenuToggle.focus();
+            }
+        });
+    </script>
+</body>
+</html>

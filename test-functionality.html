@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Residents - Functionality Tester</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #3B82F6;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748B;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #3B82F6;
+        }
+        .test-section h2 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .test-section h2::before {
+            content: "✓";
+            background: #3B82F6;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .checklist li:hover {
+            background: #eff6ff;
+            transform: translateX(5px);
+        }
+        .checklist input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .progress-bar {
+            background: #e5e7eb;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .test-button {
+            background: #3B82F6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .test-button:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        .test-button.secondary {
+            background: #64748B;
+        }
+        .test-button.secondary:hover {
+            background: #475569;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.pass {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .status.fail {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .status.pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .alert.info {
+            background: #dbeafe;
+            border-left: 4px solid #3B82F6;
+            color: #1e40af;
+        }
+        .alert.success {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            color: #166534;
+        }
+        code {
+            background: #1e293b;
+            color: #3B82F6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Active Residents - Functionality Tester</h1>
+        <p class="subtitle">Test all website features and track your progress</p>
+
+        <div class="alert info">
+            <strong>📋 Instructions:</strong> Click the checkboxes as you complete each test. Your progress is saved automatically!
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress">0%</div>
+        </div>
+
+        <div class="quick-links">
+            <button class="test-button" onclick="window.open('index.html', '_blank')">Open Landing Page</button>
+            <button class="test-button" onclick="window.open('support.html', '_blank')">Open Support Page</button>
+            <button class="test-button" onclick="window.open('privacy.html', '_blank')">Open Privacy Page</button>
+            <button class="test-button secondary" onclick="resetProgress()">Reset All Tests</button>
+        </div>
+
+        <!-- Mobile Menu Tests -->
+        <div class="test-section">
+            <h2>Mobile Menu Testing</h2>
+            <ul class="checklist" data-section="mobile">
+                <li><input type="checkbox" id="mobile-1"> <label for="mobile-1">Hamburger icon appears on mobile (resize browser < 768px)</label></li>
+                <li><input type="checkbox" id="mobile-2"> <label for="mobile-2">Clicking hamburger opens menu smoothly</label></li>
+                <li><input type="checkbox" id="mobile-3"> <label for="mobile-3">Icon changes to "X" when menu is open</label></li>
+                <li><input type="checkbox" id="mobile-4"> <label for="mobile-4">All menu links are visible and clickable</label></li>
+                <li><input type="checkbox" id="mobile-5"> <label for="mobile-5">Clicking a link closes the menu</label></li>
+                <li><input type="checkbox" id="mobile-6"> <label for="mobile-6">Pressing ESC closes the menu</label></li>
+                <li><input type="checkbox" id="mobile-7"> <label for="mobile-7">Can tab to hamburger and press Enter to open</label></li>
+                <li><input type="checkbox" id="mobile-8"> <label for="mobile-8">Mobile menu works in dark mode</label></li>
+            </ul>
+        </div>
+
+        <!-- Search Feature Tests -->
+        <div class="test-section">
+            <h2>Search Feature Testing (Support Page)</h2>
+            <ul class="checklist" data-section="search">
+                <li><input type="checkbox" id="search-1"> <label for="search-1">Type "password" → Shows password reset FAQ</label></li>
+                <li><input type="checkbox" id="search-2"> <label for="search-2">Type "location" → Shows location services FAQ</label></li>
+                <li><input type="checkbox" id="search-3"> <label for="search-3">Type "edit" → Shows edit report FAQ</label></li>
+                <li><input type="checkbox" id="search-4"> <label for="search-4">Results appear after 2+ characters</label></li>
+                <li><input type="checkbox" id="search-5"> <label for="search-5">Shows "No results found" for gibberish</label></li>
+                <li><input type="checkbox" id="search-6"> <label for="search-6">Clicking result navigates to section</label></li>
+                <li><input type="checkbox" id="search-7"> <label for="search-7">Quick search links populate search input</label></li>
+                <li><input type="checkbox" id="search-8"> <label for="search-8">Pressing ESC closes search results</label></li>
+                <li><input type="checkbox" id="search-9"> <label for="search-9">Search works in dark mode</label></li>
+            </ul>
+        </div>
+
+        <!-- Keyboard Navigation Tests -->
+        <div class="test-section">
+            <h2>Keyboard Navigation Testing</h2>
+            <ul class="checklist" data-section="keyboard">
+                <li><input type="checkbox" id="keyboard-1"> <label for="keyboard-1">Can tab through entire page in logical order</label></li>
+                <li><input type="checkbox" id="keyboard-2"> <label for="keyboard-2">All links have visible focus states (blue ring)</label></li>
+                <li><input type="checkbox" id="keyboard-3"> <label for="keyboard-3">Can open/close FAQ accordion with Enter</label></li>
+                <li><input type="checkbox" id="keyboard-4"> <label for="keyboard-4">Can navigate cookie banner with keyboard</label></li>
+                <li><input type="checkbox" id="keyboard-5"> <label for="keyboard-5">No keyboard traps (can tab out of everything)</label></li>
+                <li><input type="checkbox" id="keyboard-6"> <label for="keyboard-6">ESC closes mobile menu, cookie banner, search</label></li>
+                <li><input type="checkbox" id="keyboard-7"> <label for="keyboard-7">Can activate all buttons with Enter/Space</label></li>
+            </ul>
+        </div>
+
+        <!-- Accessibility Tests -->
+        <div class="test-section">
+            <h2>Accessibility Testing</h2>
+            <ul class="checklist" data-section="accessibility">
+                <li><input type="checkbox" id="a11y-1"> <label for="a11y-1">Screen reader announces page title correctly</label></li>
+                <li><input type="checkbox" id="a11y-2"> <label for="a11y-2">Screen reader announces navigation landmarks</label></li>
+                <li><input type="checkbox" id="a11y-3"> <label for="a11y-3">Images have descriptive alt text</label></li>
+                <li><input type="checkbox" id="a11y-4"> <label for="a11y-4">Form inputs have associated labels</label></li>
+                <li><input type="checkbox" id="a11y-5"> <label for="a11y-5">Sufficient color contrast (text readable)</label></li>
+                <li><input type="checkbox" id="a11y-6"> <label for="a11y-6">Mobile menu announces expanded/collapsed state</label></li>
+            </ul>
+        </div>
+
+        <!-- Dark Mode Tests -->
+        <div class="test-section">
+            <h2>Dark Mode Testing</h2>
+            <ul class="checklist" data-section="darkmode">
+                <li><input type="checkbox" id="dark-1"> <label for="dark-1">Dark mode toggle button works on all pages</label></li>
+                <li><input type="checkbox" id="dark-2"> <label for="dark-2">Theme preference persists on page reload</label></li>
+                <li><input type="checkbox" id="dark-3"> <label for="dark-3">All text readable in dark mode</label></li>
+                <li><input type="checkbox" id="dark-4"> <label for="dark-4">All cards/panels styled correctly in dark mode</label></li>
+                <li><input type="checkbox" id="dark-5"> <label for="dark-5">Icons visible in dark mode</label></li>
+                <li><input type="checkbox" id="dark-6"> <label for="dark-6">Focus states visible in dark mode</label></li>
+            </ul>
+        </div>
+
+        <!-- Cookie Consent Tests -->
+        <div class="test-section">
+            <h2>Cookie Consent Testing</h2>
+            <ul class="checklist" data-section="cookies">
+                <li><input type="checkbox" id="cookie-1"> <label for="cookie-1">Cookie banner appears on first visit</label></li>
+                <li><input type="checkbox" id="cookie-2"> <label for="cookie-2">"Accept All" button saves preference</label></li>
+                <li><input type="checkbox" id="cookie-3"> <label for="cookie-3">"Essential Only" button saves preference</label></li>
+                <li><input type="checkbox" id="cookie-4"> <label for="cookie-4">Banner doesn't show again after choice</label></li>
+                <li><input type="checkbox" id="cookie-5"> <label for="cookie-5">Privacy policy link works from banner</label></li>
+                <li><input type="checkbox" id="cookie-6"> <label for="cookie-6">Banner can be closed with ESC key</label></li>
+            </ul>
+        </div>
+
+        <!-- SEO Tests -->
+        <div class="test-section">
+            <h2>SEO & Meta Tags Testing</h2>
+            <ul class="checklist" data-section="seo">
+                <li><input type="checkbox" id="seo-1"> <label for="seo-1">Sitemap accessible at <code>/sitemap.xml</code></label></li>
+                <li><input type="checkbox" id="seo-2"> <label for="seo-2">Robots.txt accessible at <code>/robots.txt</code></label></li>
+                <li><input type="checkbox" id="seo-3"> <label for="seo-3">Favicon appears in browser tab</label></li>
+                <li><input type="checkbox" id="seo-4"> <label for="seo-4">Page titles unique and descriptive</label></li>
+                <li><input type="checkbox" id="seo-5"> <label for="seo-5">Meta descriptions present on all pages</label></li>
+                <li><input type="checkbox" id="seo-6"> <label for="seo-6">Open Graph tags present (check page source)</label></li>
+            </ul>
+        </div>
+
+        <!-- Browser Compatibility Tests -->
+        <div class="test-section">
+            <h2>Browser Compatibility Testing</h2>
+            <ul class="checklist" data-section="browser">
+                <li><input type="checkbox" id="browser-1"> <label for="browser-1">Chrome (latest) - All features work</label></li>
+                <li><input type="checkbox" id="browser-2"> <label for="browser-2">Firefox (latest) - All features work</label></li>
+                <li><input type="checkbox" id="browser-3"> <label for="browser-3">Safari - All features work</label></li>
+                <li><input type="checkbox" id="browser-4"> <label for="browser-4">Edge - All features work</label></li>
+                <li><input type="checkbox" id="browser-5"> <label for="browser-5">Mobile Safari (iOS) - All features work</label></li>
+                <li><input type="checkbox" id="browser-6"> <label for="browser-6">Mobile Chrome (Android) - All features work</label></li>
+            </ul>
+        </div>
+
+        <!-- Performance Tests -->
+        <div class="test-section">
+            <h2>Performance Testing</h2>
+            <ul class="checklist" data-section="performance">
+                <li><input type="checkbox" id="perf-1"> <label for="perf-1">All pages load in under 3 seconds</label></li>
+                <li><input type="checkbox" id="perf-2"> <label for="perf-2">No console errors (F12 → Console)</label></li>
+                <li><input type="checkbox" id="perf-3"> <label for="perf-3">All images load correctly</label></li>
+                <li><input type="checkbox" id="perf-4"> <label for="perf-4">Animations are smooth (60fps)</label></li>
+                <li><input type="checkbox" id="perf-5"> <label for="perf-5">Mobile performance acceptable</label></li>
+            </ul>
+        </div>
+
+        <div id="completion-message" class="alert success" style="display: none;">
+            <strong>🎉 Congratulations!</strong> You've completed all tests! Your Active Residents website is ready to go live.
+        </div>
+    </div>
+
+    <script>
+        // Load saved progress
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const saved = localStorage.getItem(checkbox.id);
+                if (saved === 'true') {
+                    checkbox.checked = true;
+                }
+            });
+            updateProgress();
+        }
+
+        // Save progress
+        function saveProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.id, checkbox.checked);
+                    updateProgress();
+                });
+            });
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const total = checkboxes.length;
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const percentage = Math.round((checked / total) * 100);
+
+            const progressFill = document.getElementById('progress');
+            progressFill.style.width = percentage + '%';
+            progressFill.textContent = percentage + '%';
+
+            // Show completion message
+            if (percentage === 100) {
+                document.getElementById('completion-message').style.display = 'block';
+            } else {
+                document.getElementById('completion-message').style.display = 'none';
+            }
+        }
+
+        // Reset all progress
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all test progress?')) {
+                localStorage.clear();
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                updateProgress();
+            }
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            saveProgress();
+        });
+    </script>
+</body>
+</html>
