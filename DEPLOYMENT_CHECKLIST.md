@@ -6,8 +6,8 @@ Your Google Analytics is now configured and ready to go!
 
 - **Measurement ID:** G-Z1X7CWVK8G
 - **Property Name:** Active Residents
-- **Stream URL:** https://www.activeresidents.site
-- **Status:** ✅ Added to index.html (line 691)
+- **Stream URL:** https://www.activeresidents.co.uk
+- **Status:** ✅ Added to index (line 691)
 
 ### What happens next with Analytics:
 
@@ -47,9 +47,9 @@ Upload to your website root directory (usually `public_html`, `www`, or `htdocs`
 
 ### Required Files:
 ```
-✅ index.html          (Landing page with Analytics)
-✅ support.html        (Support center with search)
-✅ privacy.html        (Privacy policy)
+✅ index               (Landing page with Analytics)
+✅ support             (Support center with search)
+✅ privacy             (Privacy policy)
 ✅ sitemap.xml         (For search engines)
 ✅ robots.txt          (For search engines)
 ```
@@ -74,13 +74,13 @@ Before uploading, test everything one more time:
 3. Mark off completed tests
 
 ### Option 2: Manual Testing
-1. Open `index.html` in your browser
+1. Open `index` in your browser
 2. Resize browser to mobile size (F12 → device icon)
-3. Test hamburger menu
+3. Test navigation
 4. Toggle dark mode
 5. Accept cookie consent
-6. Open `support.html` and test search
-7. Open `privacy.html` and test mobile menu
+6. Open `support` and test search
+7. Open `privacy` and test navigation
 
 ---
 
@@ -95,9 +95,9 @@ Before uploading, test everything one more time:
    - Password: (your FTP password)
 3. **Navigate to root directory** (public_html, www, or htdocs)
 4. **Upload these 5 files:**
-   - index.html
-   - support.html
-   - privacy.html
+   - index
+   - support
+   - privacy
    - sitemap.xml
    - robots.txt
 5. **Verify upload:** Check files appear in the correct location
@@ -115,7 +115,7 @@ Before uploading, test everything one more time:
 
 ```bash
 cd "/Users/paulbridges/active residents website"
-git add index.html support.html privacy.html sitemap.xml robots.txt
+git add index support privacy sitemap.xml robots.txt
 git commit -m "Deploy Active Residents website with Analytics"
 git push origin main
 ```
@@ -127,14 +127,13 @@ git push origin main
 After uploading, visit these URLs to verify everything works:
 
 ### 1. Check Pages Load
-- ✅ https://www.activeresidents.site/
-- ✅ https://www.activeresidents.site/index.html
-- ✅ https://www.activeresidents.site/support.html
-- ✅ https://www.activeresidents.site/privacy.html
+- ✅ https://www.activeresidents.co.uk/
+- ✅ https://www.activeresidents.co.uk/support
+- ✅ https://www.activeresidents.co.uk/privacy
 
 ### 2. Check SEO Files
-- ✅ https://www.activeresidents.site/sitemap.xml
-- ✅ https://www.activeresidents.site/robots.txt
+- ✅ https://www.activeresidents.co.uk/sitemap.xml
+- ✅ https://www.activeresidents.co.uk/robots.txt
 
 ### 3. Test Features on Live Site
 - [ ] Mobile menu works
@@ -173,7 +172,7 @@ Google will give you a meta tag like:
 **I can add this to your HTML files if you give me the code!**
 
 Or you can add it yourself:
-1. Open `index.html` in a text editor
+1. Open `index` file in a text editor
 2. Find the `<head>` section
 3. Add the meta tag after line 29 (after the favicon)
 4. Save and re-upload
@@ -203,12 +202,12 @@ Once verified:
 - Review user behavior in Analytics
 
 ### Check Indexing (After 1-2 weeks)
-Google Search: `site:www.activeresidents.site`
+Google Search: `site:www.activeresidents.co.uk`
 
 Should show:
-- www.activeresidents.site/
-- www.activeresidents.site/support.html
-- www.activeresidents.site/privacy.html
+- www.activeresidents.co.uk/
+- www.activeresidents.co.uk/support
+- www.activeresidents.co.uk/privacy
 
 ---
 
@@ -238,7 +237,7 @@ Should show:
 **Solution:**
 1. Clear browser cache (Cmd+Shift+R or Ctrl+F5)
 2. Check console for JavaScript errors (F12)
-3. Verify index.html uploaded correctly
+3. Verify index file uploaded correctly
 4. Test in different browser
 
 ### Issue: Cookie banner not appearing
@@ -334,9 +333,9 @@ Before going live:
 Complete this before deploying:
 
 ### Files Ready
-- [x] index.html (with Analytics: G-Z1X7CWVK8G)
-- [x] support.html
-- [x] privacy.html
+- [x] index (with Analytics: G-Z1X7CWVK8G)
+- [x] support
+- [x] privacy
 - [x] sitemap.xml
 - [x] robots.txt
 
