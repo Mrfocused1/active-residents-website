@@ -174,17 +174,17 @@
         <div class="section">
             <div class="section-title">🌐 Website Pages</div>
             <div class="button-grid">
-                <a href="index" target="_blank" class="btn primary">
+                <a href="index.html" target="_blank" class="btn primary">
                     <div class="btn-icon">🏠</div>
                     <div class="btn-title">Landing Page</div>
                     <div class="btn-desc">Main homepage with hero section and features</div>
                 </a>
-                <a href="support" target="_blank" class="btn">
+                <a href="support.html" target="_blank" class="btn">
                     <div class="btn-icon">💬</div>
                     <div class="btn-title">Support Center</div>
                     <div class="btn-desc">Help center with live search functionality</div>
                 </a>
-                <a href="privacy" target="_blank" class="btn">
+                <a href="privacy.html" target="_blank" class="btn">
                     <div class="btn-icon">🔒</div>
                     <div class="btn-title">Privacy Policy</div>
                     <div class="btn-desc">GDPR-compliant privacy policy</div>
@@ -245,7 +245,7 @@
         <div class="section">
             <div class="section-title">📂 Project Location</div>
             <div class="path" id="file-path">
-                file:///Users/paulbridges/active%20residents%20website/index
+                file:///Users/paulbridges/active%20residents%20website/index.html
             </div>
         </div>
 
@@ -265,7 +265,7 @@
     <script>
         function testMobile() {
             alert('To test mobile view:\n\n1. Press F12 to open DevTools\n2. Click the device icon (phone/tablet)\n3. Select a device (e.g., iPhone 12)\n4. Refresh the page\n\nOr press: Cmd+Shift+M (Mac) or Ctrl+Shift+M (Windows)');
-            window.open('index', '_blank');
+            window.open('index.html', '_blank');
         }
 
         function clearCache() {
@@ -313,7 +313,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             const currentPath = window.location.href;
             const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-            document.getElementById('file-path').textContent = basePath + '/index';
+            document.getElementById('file-path').textContent = basePath + '/index.html';
         });
     </script>
 </body>

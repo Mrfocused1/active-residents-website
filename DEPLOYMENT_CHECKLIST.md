@@ -47,9 +47,10 @@ Upload to your website root directory (usually `public_html`, `www`, or `htdocs`
 
 ### Required Files:
 ```
-✅ index               (Landing page with Analytics)
-✅ support             (Support center with search)
-✅ privacy             (Privacy policy)
+✅ index.html          (Landing page with Analytics)
+✅ support.html        (Support center with search)
+✅ privacy.html        (Privacy policy)
+✅ .htaccess           (URL rewriting for clean URLs)
 ✅ sitemap.xml         (For search engines)
 ✅ robots.txt          (For search engines)
 ```
@@ -94,10 +95,11 @@ Before uploading, test everything one more time:
    - Username: (your FTP username)
    - Password: (your FTP password)
 3. **Navigate to root directory** (public_html, www, or htdocs)
-4. **Upload these 5 files:**
-   - index
-   - support
-   - privacy
+4. **Upload these 6 files:**
+   - index.html
+   - support.html
+   - privacy.html
+   - .htaccess
    - sitemap.xml
    - robots.txt
 5. **Verify upload:** Check files appear in the correct location
@@ -115,7 +117,7 @@ Before uploading, test everything one more time:
 
 ```bash
 cd "/Users/paulbridges/active residents website"
-git add index support privacy sitemap.xml robots.txt
+git add index.html support.html privacy.html .htaccess sitemap.xml robots.txt
 git commit -m "Deploy Active Residents website with Analytics"
 git push origin main
 ```
@@ -333,9 +335,10 @@ Before going live:
 Complete this before deploying:
 
 ### Files Ready
-- [x] index (with Analytics: G-Z1X7CWVK8G)
-- [x] support
-- [x] privacy
+- [x] index.html (with Analytics: G-Z1X7CWVK8G)
+- [x] support.html
+- [x] privacy.html
+- [x] .htaccess (URL rewriting)
 - [x] sitemap.xml
 - [x] robots.txt
 
