@@ -2,25 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.activeresidents.co.uk/</loc>
-        <lastmod>2023-10-26</lastmod>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.activeresidents.co.uk/index.html</loc>
-        <lastmod>2023-10-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://www.activeresidents.co.uk/support.html</loc>
-        <lastmod>2023-10-26</lastmod>
+        <loc>https://www.activeresidents.co.uk/support</loc>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.activeresidents.co.uk/privacy.html</loc>
-        <lastmod>2023-10-26</lastmod>
+        <loc>https://www.activeresidents.co.uk/privacy</loc>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
