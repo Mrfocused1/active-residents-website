@@ -477,10 +477,10 @@
                 return;
             }
 
-            const resultsHTML = results.map(result => {
+            const resultsHTML = results.map((result, index) => {
                 const preview = result.text.substring(0, 100) + (result.text.length > 100 ? '...' : '');
                 return `
-                    <a href="#${result.sectionId}" class="block p-4 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors border-b border-gray-100 dark:border-slate-700 last:border-b-0 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <a href="#${result.sectionId}" data-result-index="${index}" class="block p-4 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors border-b border-gray-100 dark:border-slate-700 last:border-b-0 focus:outline-none focus:ring-2 focus:ring-primary">
                         <div class="font-bold text-sm text-primary mb-1">${result.sectionTitle}</div>
                         <div class="text-sm text-gray-600 dark:text-gray-400">${preview}</div>
                     </a>
@@ -490,11 +490,31 @@
             searchResults.innerHTML = resultsHTML;
             searchResults.classList.remove('hidden');
 
-            // Add click handlers to close search results
-            searchResults.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
+            // Add click handlers to scroll to the specific element
+            searchResults.querySelectorAll('a').forEach((link, index) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
                     searchResults.classList.add('hidden');
                     searchInput.value = '';
+
+                    // Get the actual element that matched
+                    const result = results[index];
+                    if (result.element) {
+                        // Scroll to the element with smooth behavior
+                        result.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                        // If it's inside a details element, open it
+                        const detailsParent = result.element.closest('details');
+                        if (detailsParent && !detailsParent.open) {
+                            detailsParent.open = true;
+                        }
+
+                        // Highlight the element briefly
+                        result.element.style.backgroundColor = '#fef3c7';
+                        setTimeout(() => {
+                            result.element.style.backgroundColor = '';
+                        }, 2000);
+                    }
                 });
             });
         }
