@@ -699,31 +699,6 @@
             htmlElement.classList.remove('dark');
         }
 
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const isExpanded = mobileMenu.classList.contains('active');
-            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
-
-            // Change icon
-            const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
-            icon.textContent = isExpanded ? 'close' : 'menu';
-        });
-
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                const icon = mobileMenuToggle.querySelector('.material-symbols-outlined');
-                icon.textContent = 'menu';
-            });
-        });
-
         // Cookie Consent Management
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptCookies = document.getElementById('accept-cookies');
@@ -748,8 +723,7 @@
         });
 
         // Show cookie banner if no preference is set
-        const cookieConsent = localStorage.getItem('cookieConsent');
-        if (!cookieConsent) {
+        if (!localStorage.getItem('cookieConsent')) {
             setTimeout(() => {
                 cookieBanner.classList.remove('hidden');
             }, 1500);
