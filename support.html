@@ -422,21 +422,8 @@
     </footer>
 
     <script>
-        // Dark Mode Toggle
-        const toggleBtn = document.getElementById('theme-toggle');
+        // Dark Mode - Check for saved theme preference or system preference
         const htmlElement = document.documentElement;
-
-        toggleBtn.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        // Check for saved theme preference or system preference
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             htmlElement.classList.add('dark');
         } else {
